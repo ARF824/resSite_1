@@ -5,33 +5,297 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-      <link rel="stylesheet" href="uilities.css">
-      <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="kineto-main/dist/kineto.css">
+      <link rel="stylesheet" href="css/utilities.css">
+      <link rel="stylesheet" href="css/style.css">
       <title>Document</title>
+<style>
+  .carousel {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.slide {
+  width: 100%;
+  height: 300px;
+  box-sizing: border-box;
+  background-color:var(--secondary-color-t);
+  line-height: 1.15em;
+  font-size: 3rem;
+  text-align: center;
+  /* transition: background-color .3s; */
+}
+.slide::before,
+.slide::after,
+.slide .count {
+  display: inline-block;
+  vertical-align: middle;
+}
+.carousel [tabindex]:focus,
+.carousel button:focus {
+  outline: 0;
+}
+.carousel [tabindex='0']:focus,
+.carousel button:focus {
+  box-shadow: inset 0 0 0 2px rgba(249, 170, 51, 0.6);
+}
+.kineto__frame,
+.kineto-frame {
+  color: rgb(249, 170, 51);
+  background-color: #090909;
+  transition: height 0.25s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.kineto .kineto__slide--active,
+.kineto .kineto-slide.kineto-active {
+  background-color: var(--primary-color-tt);
+}
+
+.kineto .kineto__arrow__button,
+.kineto .kineto-arrow-button {
+  position: absolute;
+  top: 50%;
+  color: white;
+  background-color: var(--primary-color-t);
+  transform: translate(0, -50%);
+  transition: opacity 0.3s;
+}
+.kineto .kineto__arrow__button--previous,
+.kineto .kineto-previous {
+  left: 1%;
+}
+.kineto .kineto__arrow__button--next,
+.kineto .kineto-next {
+  right: 1%;
+}
+
+.kineto .kineto__pagination,
+.kineto .kineto-pagination {
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+  left: 0;
+  color: white;
+}
+.kineto .kineto__pagination__button,
+.kineto .kineto-pagination-button {
+  border-radius: 100%;
+  transition: opacity 0.3s;
+}
+.kineto .kineto__pagination__button--active,
+.kineto .kineto-pagination-button.kineto-active {
+  font-weight: 700;
+}
+.kineto .kineto__count,
+.kineto .kineto-count {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: rgb(249, 170, 51, 0.4);
+}
+.kineto .kineto__count .current,
+.kineto .kineto-count .current {
+  color: rgb(249, 170, 51);
+  font-size: 1.2rem;
+  font-style: normal;
+}
+
+#navigation .kineto__arrow__button,
+#navigation .kineto-arrow-button {
+  font-size: 1.2rem;
+}
+#navigation .kineto__pagination__button,
+#navigation .kineto-pagination-button {
+  width: auto;
+  height: auto;
+  background: transparent;
+  border-radius: 0;
+  box-sizing: border-box;
+  line-height: 20px;
+}
+
+#sync2 .slide {
+  height: 200px;
+  font-size: 2.5rem;
+}
+#sync3 .slide {
+  height: 100px;
+  font-size: 1.75rem;
+}
+</style>
 </head>
 
 <body>
       <!-- Header -->
       <div class="header">
-          <div class="container flex">
-                <a href="index.html" style="justify-self: center;">
-                        <img class="img-header" src="logo.png" alt="" onclick="">
+            <div class="container flex">
+                <a href="index.html">
+                        <img src="images\logo.png" alt="">
                 </a>
-          </div>
+            </div>
       </div>
 
-  <!-- Nav Bar-->
-<div class="navbar">
-<div class="container flex">
-  <h1 class="logo">Loruki</h1>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="features.html">Features</a></li>
-      <li><a href="docs.html">Docs</a></li>
-    </ul>
-  </nav>
-</div>
-</div>
+      <!-- Nav Bar-->
+  <div class="navbar">
+    <div class="container flex">
+      <h1 class="title">Los Tres Potrillos</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="locations.html">Locations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!--Main-->
+  <section class="main">
+    <div class="container grid grid-3">
+      <div class="intro card">
+        <h1>Welcome to Los Tres Potrillos Restaurant!</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo magnam porro tempore amet fuga distinctio, asperiores, magni eius beatae repellat perferendis nostrum maiores dicta in reiciendis ipsam, sint impedit sequi.</p>
+      </div>
+
+    <div class="card">
+      <div class="main-img">
+        <h2 style="text-align:center">Brooklyn</h2>
+        <a href="locations.html"><img src="images\brooklyn.jpg" alt=""></a>
+      </div>
+
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d6053.941186019169!2d-74.00919348670693!3d40.65257862806961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x89c25ac76257c7cb%3A0xc119aae65b3e0faa!2s1004%204th%20Ave%2C%20Brooklyn%2C%20NY%2011232!3m2!1d40.6528807!2d-74.006363!5e0!3m2!1sen!2sus!4v1608592884736!5m2!1sen!2sus" width="100%" height="auto" frameborder="0" style="border:#000 solid 2px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
+
+      <div class="info">
+        <p><b>A:</b>1004 4th Ave, Brooklyn, NY 11232</p>
+        <p><b>T:</b>718-788-8484</p>
+        <p><b>H:</b> Mon-Fri 12:00 pm - 11:00 pm<br>Sat-Sun CLOSED</p>
+      </div>
+
+      <div class="delivery" >
+        <a href="https://seekvectorlogo.com/grubhub-vector-logo-svg/" target="_blank"><img src="https://seekvectorlogo.com/wp-content/uploads/2018/01/grubhub-vector-logo.png" /></a><br>
+        <a href="https://searchlogovector.com/doordash-logo-vector-svg/" target="_blank"><img src="https://searchlogovector.com/wp-content/uploads/2018/07/doordash-logo-vector.png" /></a>
+      </div>
+
+      </div>
+
+      <div class="card">
+        <div class="main-img">
+          <h2 style="text-align:center">Jackson Heights</h2>
+          <a href="locations.html"><img src="images\dish_1.jpg" alt=""></a>
+        </div>
+
+        <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d6053.941186019169!2d-74.00919348670693!3d40.65257862806961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x89c25ac76257c7cb%3A0xc119aae65b3e0faa!2s1004%204th%20Ave%2C%20Brooklyn%2C%20NY%2011232!3m2!1d40.6528807!2d-74.006363!5e0!3m2!1sen!2sus!4v1608592884736!5m2!1sen!2sus" width="100%" height="auto" frameborder="0" style="border:#000 solid 2px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+
+        <div class="info">
+          <p><b>A:</b>1004 4th Ave, Brooklyn, NY 11232</p>
+          <p><b>T:</b>718-788-8484</p>
+          <p><b>H:</b> Mon-Fri 12:00 pm - 11:00 pm<br>Sat-Sun CLOSED</p>
+        </div>
+
+        <div class="delivery" >
+          <a href="https://seekvectorlogo.com/grubhub-vector-logo-svg/" target="_blank"><img src="https://seekvectorlogo.com/wp-content/uploads/2018/01/grubhub-vector-logo.png" /></a><br>
+          <a href="https://searchlogovector.com/doordash-logo-vector-svg/" target="_blank"><img src="https://searchlogovector.com/wp-content/uploads/2018/07/doordash-logo-vector.png" /></a>
+        </div>
+
+        </div>
+
+        <div class="card">
+          <div class="main-img">
+            <h2 style="text-align:center">Corona</h2>
+            <a href="locations.html"><img src="images\restaurant_1.jpg" alt=""></a>
+          </div>
+
+          <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d6053.941186019169!2d-74.00919348670693!3d40.65257862806961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x89c25ac76257c7cb%3A0xc119aae65b3e0faa!2s1004%204th%20Ave%2C%20Brooklyn%2C%20NY%2011232!3m2!1d40.6528807!2d-74.006363!5e0!3m2!1sen!2sus!4v1608592884736!5m2!1sen!2sus" width="100%" height="auto" frameborder="0" style="border:#000 solid 2px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
+
+          <div class="info">
+            <p><b>A:</b>1004 4th Ave, Brooklyn, NY 11232</p>
+            <p><b>T:</b>718-788-8484</p>
+            <p><b>H:</b> Mon-Fri 12:00 pm - 11:00 pm<br>Sat-Sun CLOSED</p>
+          </div>
+
+          <div class="delivery" >
+            <a href="https://seekvectorlogo.com/grubhub-vector-logo-svg/" target="_blank"><img src="https://seekvectorlogo.com/wp-content/uploads/2018/01/grubhub-vector-logo.png" /></a><br>
+            <a href="https://searchlogovector.com/doordash-logo-vector-svg/" target="_blank"><img src="https://searchlogovector.com/wp-content/uploads/2018/07/doordash-logo-vector.png" /></a>
+          </div>
+
+          </div>
+
+    </div>
+  </section>
+
+  <section class="gallery-main">
+    <div class="container">
+      <div class="card">
+    <h2>Responsive Carousel</h2>
+
+    <div id="responsive" class="carousel">
+      <div class="slide">
+        <span class="count"><img src="images\brooklyn.jpg" alt="">test</span>
+      </div>
+      <div class="slide">
+        <span class="count"><img src="images\dish_1.jpg" alt="">Hi</span>
+      </div>
+      <div class="slide">
+        <span class="count"><img src="images\restaurant_1.jpg" alt="">Test</span>
+      </div>
+    </div>
+    </div>
+    </div>
+      </section>
+      <br><br><br>
+
+      <footer class="footer p-5">
+          <div class="container grid grid-3">
+            <div>
+              <h1>Los Tres Potrillos</h1>
+              <p>Copyright &copy; 2020</p>
+            </div>
+            <nav>
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="menu.html">Menu</a></li>
+                  <li><a href="locations.html">Locations</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="social">
+              <a href="#"><i class="fab fa-github fa-2x"></i></a>
+              <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+              <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+              <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+            </div>
+          </div>
+        </footer>
+
+
+
+<script src="kineto-main/dist/kineto.js"></script>
+<script>
+Kineto.create('#responsive', {
+  // 0 ~ 599
+  perView: 1,
+  responsive: {
+    // 600 ~ 799
+    600: {
+      perView: 1.5,
+      margin: 20,
+    },
+    // 800 ~
+    800: {
+      perView: 2,
+      margin: 30,
+    },
+  },
+});
+</script>
+
 </body>
 </html>
