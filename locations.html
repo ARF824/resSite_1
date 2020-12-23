@@ -1,53 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
   <link rel="stylesheet" href="css/utilities.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Locations</title>
 </head>
+
 <body>
-  <!-- Header -->
-  <div class="header">
-        <div class="container flex">
-            <a href="index.html">
-                    <img src="images\logo.png" alt="">
-            </a>
-        </div>
-  </div>
-
   <!-- Nav Bar-->
-<div class="navbar">
-<div class="container flex">
-  <h1 class="title">Los Tres Potrillos</h1>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="menu.html">Menu</a></li>
-      <li><a href="locations.html">Locations</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</div>
-</div>
+  <div class="navbar">
+    <div class="container flex">
+      <h1 class="title">Los Tres Potrillos</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="locations.html">Locations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <a name="top-m"></a>
+  <section class="location-nav">
+    <div class="container">
+      <div class="card">
+        <a href="#brooklyn" class="jump-links-nav">BROOKLYN</a>
+        <a href="#jackson" style="display:inline-block;" class="jump-links-nav">JACKSON HEIGHTS</a>
+        <a href="#corona" class="jump-links-nav">CORONA</a>
+      </div>
+    </div>
+  </section>
 
-<br><br><br><br><br>
+  <section class="locations-main">
+    <a name="brooklyn"></a>
+    <div class="container flex">
+      <div class="card grid">
+        <h2 style="text-align:center">BROOKLYN</h2>
+        <div class="main-img">
+          <a href="locations.html"><img src="images\brooklyn.jpg" alt=""></a>
+        </div>
 
-<footer class="footer p-5">
+        <div>
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d6053.941186019169!2d-74.00919348670693!3d40.65257862806961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x89c25ac76257c7cb%3A0xc119aae65b3e0faa!2s1004%204th%20Ave%2C%20Brooklyn%2C%20NY%2011232!3m2!1d40.6528807!2d-74.006363!5e0!3m2!1sen!2sus!4v1608592884736!5m2!1sen!2sus"
+              width="100%" height="auto" frameborder="0" style="border:#000 solid 2px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
+
+          <div class="info">
+            <p><b>A:</b>1004 4th Ave, Brooklyn, NY 11232</p>
+            <p><b>T:</b>718-788-8484</p>
+            <p><b>H:</b> Mon-Fri 12:00 pm - 11:00 pm<br>Sat-Sun CLOSED</p>
+          </div>
+
+
+          <div class="delivery">
+            <a href="https://seekvectorlogo.com/grubhub-vector-logo-svg/" target="_blank"><img src="https://seekvectorlogo.com/wp-content/uploads/2018/01/grubhub-vector-logo.png" /></a><br>
+            <a href="https://searchlogovector.com/doordash-logo-vector-svg/" target="_blank"><img src="https://searchlogovector.com/wp-content/uploads/2018/07/doordash-logo-vector.png" /></a>
+          </div>
+
+        </div>
+        <div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita suscipit harum ipsa fugit quaerat impedit quisquam maxime, amet tempore, cumque, nobis molestias unde! Nihil labore magnam quidem, accusamus ut ullam.
+          </p>
+        </div>
+        <div>
+          <h1><a href="#top">Back To Top</a></h1>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer p-5">
     <div class="container grid grid-3">
       <div>
         <h1>Los Tres Potrillos</h1>
         <p>Copyright &copy; 2020</p>
       </div>
       <nav>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="locations.html">Locations</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="locations.html">Locations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
       </nav>
       <div class="social">
         <a href="#"><i class="fab fa-github fa-2x"></i></a>
@@ -61,4 +104,10 @@
 
 
 </body>
+
+
+
+
+</body>
+
 </html>
