@@ -332,8 +332,9 @@ pre {
       padding: 0 10px;
       }
 
-    .contact .container{
-    padding: 0 2px;;
+    .contact .container,
+    .menu .container{
+    padding: 0 2px;
   }
 
   .header .container {
