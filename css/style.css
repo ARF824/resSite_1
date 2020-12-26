@@ -332,6 +332,10 @@ pre {
       padding: 0 10px;
       }
 
+    .contact .container{
+    margin: 1px;
+  }
+
   .header .container {
     height: 250px;
   }
