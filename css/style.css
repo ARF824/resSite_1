@@ -258,7 +258,7 @@ pre {
 @media (max-width: 790px) {
 
   .grid,
-  .main .grid {
+  .main .grid{
     grid-template-columns: minmax(0, 1fr);
     gap: 0px;
   }
@@ -266,6 +266,7 @@ pre {
   .intro {
     grid-column: 1;
   }
+
 
   .header .container {
     height: 400px;
@@ -311,6 +312,26 @@ pre {
 }
 
 @media (max-width: 600px) {
+
+.navbar .container{
+  padding: 5px;
+}
+
+  .locations-main .grid,
+  .contact .grid{
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0px;
+  }
+
+  .locations-main .grid>*:first-child,
+  .contact .container .grid>*:first-child {
+    grid-column: 1;
+  }
+
+  .contact .card {
+      padding: 0 10px;
+      }
+
   .header .container {
     height: 250px;
   }
